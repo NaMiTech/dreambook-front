@@ -16,7 +16,7 @@ useEffect(() => {
       const response = await fetch(
         `${ baseUrl }/tags`
       );
-      if (!response.ok) {
+      if (!response.ok) {        
         throw new Error(
           `This is an HTTP error: The status is ${response.status}`
         );
@@ -26,7 +26,7 @@ useEffect(() => {
       setData(actualData);
       setError(null);
     } catch(err) {
-      setError(err.message);
+      setError(err.message);      
       setData(null);
     } finally {
       setLoading(false);
@@ -36,11 +36,18 @@ useEffect(() => {
 }, [])
 
 
-if(loading){
-  return (<div>A moment please...</div>);
-}
+if(loading){return (<div>A moment please...</div>);}
+
 if(!loading && error != null){
-  return(<div>{`There is a problem fetching the post data - ${error}`}</div>)
+  return(
+    <>
+      <div className="errorCloud">
+        <h3 className="btn-shine">Error</h3>
+        <p>No se han podido cargar los tags</p>
+      </div>    
+    </>
+  )
+  
 }
 return(
     <>    

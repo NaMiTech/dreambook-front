@@ -77,3 +77,87 @@ footer{
   color: white;
   padding: 1rem;
 }
+
+.errorCloud{
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto' !important;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.1) !important;
+  padding: 23px;
+  border-radius: 23px;
+  color: aliceblue;
+  margin-bottom: 8rem;
+  animation: wave-text 1s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+.errorCloud h3{  
+  color: ghostwhite; 
+  font-family: 'Roboto' !important;
+  white-space: pre;
+  display: block;
+  font-size: 3rem;
+}
+
+.errorCloud p{
+  color: cadetblue;
+  white-space: pre;
+  margin-top: 5rem;
+  display: block;
+}
+
+.errorCloud span{
+  color: darkgrey;
+  white-space: pre;
+  display: block;
+}
+
+.separador{
+  color: black;
+  font-size: 8rem;
+  margin-left: .2rem;
+  margin-right: .2rem;
+}
+
+@keyframes wave-text{
+  00%{
+    transform: translateY(0em);
+  }
+  60%{
+    transform: translateY(-0.6em);
+  }
+  100%{
+    transform: translateY(0em);
+  }
+}
+
+.btn-shine{
+  position: absolute;
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%,-50%);*/
+  /*padding: 12px 48px;*/
+  color: #ffffff;
+  background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+
+}
+@keyframes shine{
+  0%{ background-position: 0}
+  60%{background-position: 180px}
+  100%{background-position: 180px}
+}
