@@ -18,3 +18,8 @@ jobs:
       uses: tanwanimohit/deploy-react-to-ghpages@v1.0.1
       env: 
         REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+
+    - name: Semantic Release
+      env: 
+        GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+      run: npx semantic-release
