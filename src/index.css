@@ -161,3 +161,7 @@ footer{
   60%{background-position: 180px}
   100%{background-position: 180px}
 }
+
+.icono-sociales{
+  color: black;
+}

@@ -7,11 +7,11 @@ export const Footer = () => {
         <footer>
         <div className='row'>
         <div className="col-4">
-            <a href ="/"><i className="fa-brands fa-twitter"></i></a>
+            <a href ="/"><i className="fa-brands fa-twitter icono-sociales"></i></a>
             &nbsp;&nbsp;
-            <a href ="/"><i className="fa-brands fa-facebook-f"></i></a>
+            <a href ="/"><i className="fa-brands fa-facebook-f icono-sociales"></i></a>
             &nbsp;&nbsp;
-            <a href ="/"><i className="fa-brands fa-github"></i></a>
+            <a href ="/"><i className="fa-brands fa-github icono-sociales"></i></a>
         </div>
             <div className="col-4">
                 Copyright © 2022        <a href="https://nami-tech.es/" className="text-gray-600 hover:text-gray-900">Company - NaMi Tech</a>
