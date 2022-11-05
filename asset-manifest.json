@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "./static/css/main.cd10d261.css",
+    "main.js": "./static/js/main.023aa4aa.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "./static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "./static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "./static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "./static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "./static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/google-play-badge.png": "./static/media/google-play-badge.f7515e81714b1c53997a.png",
+    "index.html": "./index.html",
+    "main.cd10d261.css.map": "./static/css/main.cd10d261.css.map",
+    "main.023aa4aa.js.map": "./static/js/main.023aa4aa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd10d261.css",
+    "static/js/main.023aa4aa.js"
+  ]
+}
