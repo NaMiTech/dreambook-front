@@ -1,0 +1,81 @@
+body{
+    color: aliceblue;
+    text-align: center;
+}
+
+h2{
+    color: #FFF;
+}
+
+.component{
+    margin-top: 2rem;
+    margin-bottom: .3rem;
+}
+
+.linea {
+    border-top: 1px solid #FFF;;
+    height: 2px;
+    max-width: 200px;
+    padding: 0;
+    margin: 50px auto 0 auto;
+}
+
+.dream-table{
+    background-color: transparent;
+    padding: .5rem;
+    width: 90%;
+    margin-left: auto;
+    border-top: 4px solid #FFF;
+    border-bottom: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.1) !important;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+}
+
+.dream-table th{
+    padding-top: 2rem;
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+}
+
+.dream-table tr{
+   text-align: center;
+}
+
+.table-image{
+    width: 75px;
+}
+
+.total-row{
+    border-top: 1px solid #FFF;
+    padding-bottom: 2rem;
+}
+
+
+.card{
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.list-group list-group-flush{
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.list-group-item{
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.list-group-item:hover{
+    background-color: #FFF !important;
+}
+
+.css-yafthl-MuiSlider-markLabel{
+    color: #FFF !important;
+}
+
+.css-1aznpnh-MuiSlider-root{
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
