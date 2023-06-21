@@ -8,6 +8,7 @@ import { DreamNavigator } from './components/DreamNavigator';
 import { StadisticComponent } from './components/StadisticComponent';
 import { DayNavigator } from './components/DayNavigator';
 import { GlobalView } from './components/GlobalView';
+import { GraphComponent } from './components/GraphComponent';
 
 
 export const App = () => {
@@ -20,10 +21,11 @@ return(
   <StoreComponent/>
   <div className="linea"></div>
   <DreamNavigator/>
-  <StadisticComponent/>
+
   <DayNavigator/>
   <div className="linea"></div>
   <GlobalView/>
+  <GraphComponent/>
   <Footer/>
 </>
 )}

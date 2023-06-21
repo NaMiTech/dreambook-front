@@ -1,8 +1,12 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { useEffect, useState } from 'react'
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { StadisticComponent } from './StadisticComponent';
+import { setMonth, setYear } from '../store/dateSlicer';
+import { useMonth } from '../hooks/useMonth';
 
 const year = [
   {"label": "2022", "value" : 1},
@@ -26,38 +30,53 @@ const month = [
   
   ]
 
-const data = null
+//const data = null
+
 
 function valuetext(value) {
-    return `${value}°C`;
-  }
+  return `${value}°C`;
+}
+
+function valueLabelFormat(value) {
+  return month.findIndex((month) => month.value === value) + 1;
+}
+
+
+export const DreamNavigator = () => {
   
-  function valueLabelFormat(value) {
-    return month.findIndex((month) => month.value === value) + 1;
-  }
+  const dispatch = useDispatch();
+  const [currentMonth, setCurrenMonth] = useState("Enero");
+  const [currentYear, setCurrenYear] = useState("2023");
+  const selectYear = useSelector((state)=>state.date.year);
   
-  export const DreamNavigator = () => {
+  const data = useMonth()
+  
+    useEffect(()=>{
     
-    const [currentMonth, setCurrenMonth] = useState("Enero");
-    const [currentYear, setCurrenYear] = useState("2023");
+      console.log("Año seleccionado : " + selectYear)
+    
+    },[selectYear])
     
     const handleOnChange = (e) =>{
         console.log(e.target.value);
         //console.log(month[e.target.value - 1].label);
         setCurrenMonth(month[e.target.value - 1].label)
+        dispatch(setMonth(month[e.target.value - 1].label))
       }
 
       const selectedYear = (e) =>{
-        console.log(e.target.value);
+        //console.log(e.target.value);
         //console.log(month[e.target.value - 1].label);
         setCurrenYear(year[e.target.value - 1].label)
+
+        dispatch(setYear(year[e.target.value - 1].label))
       }
 
     return(
         <>  
         <div className='component'>
 
-            <h2>Y con esto se soñó: </h2>
+            <h2>Y con esto se soñaba... </h2>
 
             <Slider
               aria-label="Restricted values"
@@ -82,12 +101,13 @@ function valuetext(value) {
               />
           
 
-          {currentMonth} / {currentYear}
+          <h3>En {currentMonth} del {currentYear}</h3>
         </div>
 
       {
           data
-            ? <StadisticComponent/>
+            ? <StadisticComponent
+            data={data}/>
             : <p>No hay datos</p>
 
         }

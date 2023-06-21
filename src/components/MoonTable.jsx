@@ -1,4 +1,10 @@
 import React from 'react';
+import { useEffect } from 'react'
+import { useSelector } from 'react-redux';
+
+import { useMoonStadistic } from '../hooks/useMoonStadistic';
+import { ErrorComponent } from './ErrorComponent';
+import { NoDataComponent } from './NoDataComponent';
 
 const new_moon   = require ('../asserts/img/new_moon.png');
 const first_quarter   = require ('../asserts/img/first_quarter.png');
@@ -11,6 +17,37 @@ const waxing_gibbous  = require ('../asserts/img/waxing_gibbous.png');
 
 
 export const MoonTable = () =>{
+
+  const currentYear = useSelector((state)=>state.date.year);  
+  const {MoonStadisticQuery} = useMoonStadistic(currentYear);
+
+  useEffect(()=>{
+    
+    console.log("Informacion lunar del año : " + currentYear)
+  
+  },[currentYear])
+
+  // if(MoonStadisticQuery.isLoading){return (<div>A moment please...</div>);}
+
+  // console.log(MoonStadisticQuery.data)
+
+  // if(!MoonStadisticQuery.data){
+  //   return(
+  //     <>
+  //       <div className="errorCloud">
+  //         <h3 className="btn-shine">Error</h3>
+  //         <p>No se han podido cargar los tags</p>
+  //       </div>    
+  //     </>
+  //   )
+    
+  // }
+
+
+  if(MoonStadisticQuery.isLoading){return (<div class="custom-loader"></div>);}    
+  if(MoonStadisticQuery.isError){return (<ErrorComponent/>)}      
+  if(!MoonStadisticQuery.data){return(<NoDataComponent/>)}
+
 return(
     <>
 
