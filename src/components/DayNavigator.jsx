@@ -78,8 +78,11 @@ export const DayNavigator = () => {
     return(
         <>
         <div className='component'>
-
-        <h3>El día : {day}/{month}/{year}</h3>
+        {
+          day
+          ?<h3>El día : {day}/{month}/{year}</h3>          
+          :<h3>Seleccione un día</h3>
+        }
         <Slider
               aria-label="Restricted values"
               defaultValue={1}

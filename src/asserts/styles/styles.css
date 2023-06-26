@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 body{
+    font-family: 'Concert One', cursive;
     color: aliceblue;
     text-align: center;
-    width: 90vw;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+h1{
+    font-family: 'Concert One', cursive;
 }
 
 h2{
     color: #FFF;
+    font-family: 'Concert One', cursive;
 }
 
 .component{
@@ -122,4 +130,47 @@ footer{
   
   @keyframes s6 { 
     100%{transform: rotate(1turn)}
+  }
+
+  .lenguaje-selector .card-title{
+    font-size: .9rem;    
+  }
+
+  .lenguaje-selector{
+    width: 20%;
+    position: absolute;
+    right: 2%;
+    top: .7%;
+    font-size: .6rem;
+
+  }
+
+  /* .lenguaje-selector :hover{
+    background-color: white;
+  } */
+
+  .lenguaje-selector .card-text{
+    color: white;
+  }
+
+  .menu {
+    position: absolute;
+    list-style-type: none;
+    /* margin: 5px 0; */
+    padding: 0;
+    width: 150px;
+  }
+
+  .menu-item{
+    padding: 5px;
+    margin-top: 1px;
+  }
+
+  .menu-item:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    color: black;
+  }
+
+  .dropdown-toggle{
+    background-color: rgb(1, 2, 112);
   }
