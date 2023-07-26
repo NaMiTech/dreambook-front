@@ -1,5 +1,8 @@
 import React from 'react';
+import { useEffect } from 'react'
 import { useSelector } from 'react-redux';
+import { ErrorComponent } from './ErrorComponent';
+import { NoDataComponent } from './NoDataComponent';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -11,6 +14,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import { useEvolutionGraph } from '../hooks/useEvolutionGraph';
 
 ChartJS.register(
   CategoryScale,
@@ -21,6 +25,8 @@ ChartJS.register(
   Tooltip,
   Legend
 );
+
+
 
 function getLabelForValue(val){
 
@@ -107,34 +113,53 @@ export const options = {
 
 //const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 const labels = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Vigilia',
-      data:  [1, 1, 0, -1, 1, 0],
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-      yAxisID: 'y',
-    },
-    {
-      label: 'Sueños',
-      data: [0, 0, 1, -1, 1, 1],
-      borderColor: 'rgb(53, 162, 235)',
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-      yAxisID: 'y1',
-    },
-  ],
-};
 
 export const GraphComponent = () => {
-  const selectYear = useSelector((state)=>state.date.year);
+  const currentYear = useSelector((state)=>state.date.year);
+  const {EvolutionQuery} = useEvolutionGraph(currentYear)
+
+  useEffect(()=>{
+    
+    console.log("Evolución del año : " + currentYear)
+  
+  },[currentYear])
+
+  if(EvolutionQuery.isLoading){return (<div class="custom-loader"></div>);}    
+  if(EvolutionQuery.isError){return (<ErrorComponent/>)}      
+  if(!EvolutionQuery.data){return(<NoDataComponent/>)}
+  
+  //console.log(EvolutionQuery.data)
+
+  const data = {
+      labels,
+      datasets: [
+        {
+          label: 'Vigilia',
+          data:  EvolutionQuery.data.day_mood,
+          borderColor: 'rgb(255, 99, 132)',
+          backgroundColor: 'rgba(255, 99, 132, 0.5)',
+          yAxisID: 'y',
+        },
+        {
+          label: 'Sueños',
+          data: EvolutionQuery.data.dream_mood,
+          borderColor: 'rgb(53, 162, 235)',
+          backgroundColor: 'rgba(53, 162, 235, 0.5)',
+          yAxisID: 'y1',
+        },
+      ],
+    };
+
     return(
         <>
-        <h3>Evolución del {selectYear}</h3>
+        <h3>Evolución del {currentYear}</h3>
+        <div className='grafica-evolucion'>
+
         <Line 
         options={options} 
         data={data} />
+        
+        </div>
         </>
       )
 }

@@ -67,7 +67,7 @@ export const DayNavigator = () => {
       useEffect(()=>{
     
         console.log("Dia seleccionado : " + currentDay)
-        console.log(infoCurrentDay)
+        //console.log(infoCurrentDay)
       
       },[currentDay])
     

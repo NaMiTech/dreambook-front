@@ -34,6 +34,7 @@ h2{
     padding: .5rem;
     width: 90%;
     margin-left: auto;
+    margin-right: auto;
     border-top: 4px solid #FFF;
     border-bottom: 2px solid #FFF;
     background: rgba(255, 255, 255, 0.1) !important;
@@ -85,8 +86,13 @@ h2{
 }
 
 .css-1aznpnh-MuiSlider-root{
-    margin-right: 2rem;
+    /* margin-right: 2rem;
     margin-left: 2rem;
+    width: 90% !important; */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block !important;
 }
 
 footer{
@@ -173,4 +179,16 @@ footer{
 
   .dropdown-toggle{
     background-color: rgb(1, 2, 112);
+  }
+
+  .moon-display{
+    max-width: 100px;
+    margin-top: 3rem;
+  }
+
+  .grafica-evolucion{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
   }

@@ -26,7 +26,7 @@ export const DayInfo = ({currentDay}) => {
     const DayQuery = useDay()
 
     useEffect(()=>{
-        console.log(DayQuery)
+        //console.log(DayQuery)
     }, [DayQuery])
 
     if(DayQuery.isLoading){return (<div class="custom-loader"></div>);}    

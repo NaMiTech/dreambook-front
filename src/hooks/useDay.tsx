@@ -11,7 +11,7 @@ const getDay = async(year:string, month: string, day: string):Promise<Day> =>{
     params.append('year',   year.toString())
     params.append('month',  month.toString())
     params.append('day',    day.toString())
-    const {data} = await dreambookApi.get<Day>(`/get-dream/`, {params})
+    const {data} = await dreambookApi.get<Day>(`/get-dreams/`, {params})
     return data;
 }
 

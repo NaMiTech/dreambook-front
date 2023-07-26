@@ -16,7 +16,7 @@ const getMonth = async(month:string):Promise<month> =>{
 
 export const useMonth = () =>{
     const month = useSelector((state: any)=>state.date.month);
-    const MonthQuery = useQuery(['seasons'],()=> getMonth(month))
+    const MonthQuery = useQuery(['dream'],()=> getMonth(month))
 
     return {MonthQuery}
 }

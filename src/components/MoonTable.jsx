@@ -27,23 +27,6 @@ export const MoonTable = () =>{
   
   },[currentYear])
 
-  // if(MoonStadisticQuery.isLoading){return (<div>A moment please...</div>);}
-
-  // console.log(MoonStadisticQuery.data)
-
-  // if(!MoonStadisticQuery.data){
-  //   return(
-  //     <>
-  //       <div className="errorCloud">
-  //         <h3 className="btn-shine">Error</h3>
-  //         <p>No se han podido cargar los tags</p>
-  //       </div>    
-  //     </>
-  //   )
-    
-  // }
-
-
   if(MoonStadisticQuery.isLoading){return (<div class="custom-loader"></div>);}    
   if(MoonStadisticQuery.isError){return (<ErrorComponent/>)}      
   if(!MoonStadisticQuery.data){return(<NoDataComponent/>)}
@@ -55,61 +38,61 @@ return(
   <thead>
     <tr>
       <th scope="col">·</th>
-      <th scope="col"><img alt="first quarter" src={String(new_moon)} className='table-image'/></th>
-      <th scope="col"><img alt="first quarter" src={String(waxing_crescent)} className='table-image'/></th>
-      <th scope="col"><img alt="first quarter" src={String(first_quarter)} className='table-image'/></th>
-      <th scope="col"><img alt="first quarter" src={String(waxing_gibbous)} className='table-image'/></th>
-      <th scope="col"><img alt="first quarter" src={String(full)} className='table-image'/></th>
-      <th scope="col"><img alt="first quarter" src={String(waning_gibbous)} className='table-image'/></th>
-      <th scope="col"><img alt="first quarter" src={String(last_quarter)} className='table-image'/></th>
-      <th scope="col"><img alt="first quarter" src={String(waning_crescent)} className='table-image'/></th>
+      <th scope="col"><img alt="first quarter" src={String(new_moon)}         className='table-image' title="Luna Nueva"/></th>
+      <th scope="col"><img alt="first quarter" src={String(waxing_crescent)}  className='table-image' title="Luna "/></th>
+      <th scope="col"><img alt="first quarter" src={String(first_quarter)}    className='table-image' title="Luna "/></th>
+      <th scope="col"><img alt="first quarter" src={String(waxing_gibbous)}   className='table-image' title="Luna "/></th>
+      <th scope="col"><img alt="first quarter" src={String(full)}             className='table-image' title="Luna "/></th>
+      <th scope="col"><img alt="first quarter" src={String(waning_gibbous)}   className='table-image' title="Luna "/></th>
+      <th scope="col"><img alt="first quarter" src={String(last_quarter)}     className='table-image' title="Luna "/></th>
+      <th scope="col"><img alt="first quarter" src={String(waning_crescent)}  className='table-image' title="Luna "/></th>
 
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">Positivos</th>
-      <td>25%</td>
-      <td>30%</td>
-      <td>40%</td>
-      <td>15%</td>
-      <td>23%</td>
-      <td>70%</td>
-      <td>12%</td>
-      <td>90%</td>
+      <td>{MoonStadisticQuery.data.new_moon["positive"]} %</td>
+      <td>{MoonStadisticQuery.data.waxing_crescent["positive"]} %</td>
+      <td>{MoonStadisticQuery.data.first_quarter["positive"]} %</td>
+      <td>{MoonStadisticQuery.data.waxing_gibbous["positive"]} %</td>
+      <td>{MoonStadisticQuery.data.full_moon["positive"]} %</td>
+      <td>{MoonStadisticQuery.data.waning_gibbous["positive"]} %</td>
+      <td>{MoonStadisticQuery.data.last_quarter["positive"]} %</td>
+      <td>{MoonStadisticQuery.data.waning_crescent["positive"]} %</td>
     </tr>
     <tr>
       <th scope="row">Neutros</th>
-      <td>25%</td>
-      <td>30%</td>
-      <td>40%</td>
-      <td>15%</td>
-      <td>23%</td>
-      <td>70%</td>
-      <td>12%</td>
-      <td>90%</td>
+      <td>{MoonStadisticQuery.data.new_moon["neutral"]} %</td>
+      <td>{MoonStadisticQuery.data.waxing_crescent["neutral"]} %</td>
+      <td>{MoonStadisticQuery.data.first_quarter["neutral"]} %</td>
+      <td>{MoonStadisticQuery.data.waxing_gibbous["neutral"]} %</td>
+      <td>{MoonStadisticQuery.data.full_moon["neutral"]} %</td>
+      <td>{MoonStadisticQuery.data.waning_gibbous["neutral"]} %</td>
+      <td>{MoonStadisticQuery.data.last_quarter["neutral"]} %</td>
+      <td>{MoonStadisticQuery.data.waning_crescent["neutral"]} %</td>
     </tr>
     <tr>
       <th scope="row">Negativos</th>
-      <td>25%</td>
-      <td>30%</td>
-      <td>40%</td>
-      <td>15%</td>
-      <td>23%</td>
-      <td>70%</td>
-      <td>12%</td>
-      <td>90%</td>
+      <td>{MoonStadisticQuery.data.new_moon["negative"]} %</td>
+      <td>{MoonStadisticQuery.data.waxing_crescent["negative"]} %</td>
+      <td>{MoonStadisticQuery.data.first_quarter["negative"]} %</td>
+      <td>{MoonStadisticQuery.data.waxing_gibbous["negative"]} %</td>
+      <td>{MoonStadisticQuery.data.full_moon["negative"]} %</td>
+      <td>{MoonStadisticQuery.data.waning_gibbous["negative"]} %</td>
+      <td>{MoonStadisticQuery.data.last_quarter["negative"]} %</td>
+      <td>{MoonStadisticQuery.data.waning_crescent["negative"]} %</td>
     </tr>
     <tr className='total-row'>
       <th scope="row">Totales</th>
-      <td>25</td>
-      <td>30</td>
-      <td>40</td>
-      <td>15</td>
-      <td>23</td>
-      <td>70</td>
-      <td>12</td>
-      <td>90</td>
+      <td>{MoonStadisticQuery.data.new_moon["total"]} </td>
+      <td>{MoonStadisticQuery.data.waxing_crescent["total"]}</td>
+      <td>{MoonStadisticQuery.data.first_quarter["total"]} </td>
+      <td>{MoonStadisticQuery.data.waxing_gibbous["total"]} </td>
+      <td>{MoonStadisticQuery.data.full_moon["total"]} </td>
+      <td>{MoonStadisticQuery.data.waning_gibbous["total"]} </td>
+      <td>{MoonStadisticQuery.data.last_quarter["total"]} </td>
+      <td>{MoonStadisticQuery.data.waning_crescent["total"]} </td>
     </tr>
   </tbody>
 </table>

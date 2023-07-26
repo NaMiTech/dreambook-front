@@ -21,25 +21,12 @@ export const SeasonTable = () =>{
     
     },[currentYear])
 
-    // if(SeasonQuery.isLoading){return (<div>A moment please...</div>);}
-
-    // console.log(SeasonQuery.data)
-
-    // if(!SeasonQuery.data){
-    //   return(
-    //     <>
-    //       <div className="errorCloud">
-    //         <h3 className="btn-shine">Error</h3>
-    //         <p>No se han podido cargar los tags</p>
-    //       </div>    
-    //     </>
-    //   )
-      
-    // }
 
     if(SeasonQuery.isLoading){return (<div class="custom-loader"></div>);}    
     if(SeasonQuery.isError){return (<ErrorComponent/>)}      
     if(!SeasonQuery.data){return(<NoDataComponent/>)}
+
+    //console.log(SeasonQuery.data)
 
     return(<>
         <h3>Datos estacionales</h3>
@@ -47,41 +34,41 @@ export const SeasonTable = () =>{
   <thead>
     <tr>
       <th scope="col">·</th>
-      <th scope="col"><img alt="first quarter" src={String(spring)} className='table-image'/></th>
-      <th scope="col"><img alt="first quarter" src={String(summer)} className='table-image'/></th>
-      <th scope="col"><img alt="first quarter" src={String(fall)} className='table-image'/></th>
-      <th scope="col"><img alt="first quarter" src={String(winter)} className='table-image'/></th>
+      <th scope="col"><img alt="first quarter" src={String(spring)} className='table-image' title="Primavera"/></th>
+      <th scope="col"><img alt="first quarter" src={String(summer)} className='table-image' title="Verano"/></th>
+      <th scope="col"><img alt="first quarter" src={String(fall)}   className='table-image' title="Otoño"/></th>
+      <th scope="col"><img alt="first quarter" src={String(winter)} className='table-image' title="Invierno"/></th>
 
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">Positivos</th>
-      <td>25%</td>
-      <td>30%</td>
-      <td>40%</td>
-      <td>15%</td>
+      <td>{SeasonQuery.data.sprint["positive"]} %</td>
+      <td>{SeasonQuery.data.summer["positive"]} %</td>
+      <td>{SeasonQuery.data.fall["positive"]} %</td>
+      <td>{SeasonQuery.data.winter["positive"]} %</td>
     </tr>
     <tr>
       <th scope="row">Neutros</th>
-      <td>25%</td>
-      <td>30%</td>
-      <td>40%</td>
-      <td>15%</td>
+      <td>{SeasonQuery.data.sprint["neutral"]} %</td>
+      <td>{SeasonQuery.data.summer["neutral"]} %</td>
+      <td>{SeasonQuery.data.fall["neutral"]} %</td>
+      <td>{SeasonQuery.data.winter["neutral"]} %</td>
     </tr>
     <tr>
       <th scope="row">Negativos</th>
-      <td>25%</td>
-      <td>30%</td>
-      <td>40%</td>
-      <td>15%</td>
+      <td>{SeasonQuery.data.sprint["negative"]} %</td>
+      <td>{SeasonQuery.data.summer["negative"]} %</td>
+      <td>{SeasonQuery.data.fall["negative"]} %</td>
+      <td>{SeasonQuery.data.winter["negative"]} %</td>
     </tr>
     <tr className='total-row'>
       <th scope="row">Totales</th>
-      <td>25</td>
-      <td>30</td>
-      <td>40</td>
-      <td>15</td>
+      <td>{SeasonQuery.data.sprint["total"]}</td>
+      <td>{SeasonQuery.data.summer["total"]}</td>
+      <td>{SeasonQuery.data.fall["total"]}</td>
+      <td>{SeasonQuery.data.winter["total"]}</td>
     </tr>
   </tbody>
 </table>

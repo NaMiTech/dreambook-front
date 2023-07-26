@@ -48,7 +48,8 @@ export const DreamNavigator = () => {
   const [currentMonth, setCurrenMonth] = useState("Enero");
   const [currentYear, setCurrenYear] = useState("2023");
   const selectYear = useSelector((state)=>state.date.year);
-  
+  const selectMonth = useSelector((state)=>state.date.month);
+
   const data = useMonth()
   
     useEffect(()=>{
@@ -105,10 +106,10 @@ export const DreamNavigator = () => {
         </div>
 
       {
-          data
+          selectMonth
             ? <StadisticComponent
             data={data}/>
-            : <p>No hay datos</p>
+            : <p>Seleccione un mes para ver las estadisticas</p>
 
         }
 

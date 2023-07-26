@@ -10,6 +10,7 @@ import { GlobalView } from './components/GlobalView';
 import { GraphComponent } from './components/GraphComponent';
 import { SelectorLenguaje } from './components/SelectorLenguage';
 import { DropdownSelectorLenguaje } from './components/DropdownSelectorLenguaje';
+import { ShowMoon } from './components/ShowMoon';
 
 
 export const App = () => {
@@ -17,6 +18,7 @@ export const App = () => {
 return(
 <>
   <DropdownSelectorLenguaje/>
+  <ShowMoon/>
   <HeaderTitle/>
   <HeaderSubTitle/>
   <CloudTags/>
