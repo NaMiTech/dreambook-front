@@ -27,7 +27,7 @@ return(
     <div className="cloud-container">
     
         <TagCloud
-            minSize={12}
+            // minSize={12}
             maxSize={35}
             tags={tagQuery.data}
             className="dream-cloud"            

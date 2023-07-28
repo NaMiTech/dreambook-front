@@ -40,8 +40,10 @@ export const StadisticComponent = () => {
                     
                 </div>
                 <div className="col">
-                    <h3>Top de temas en {selectMonth} del {selectYear}</h3>
                     <div className="card">
+                        <div className="card-header">
+                            <p>Top de temas en {selectMonth} del {selectYear}</p>                    
+                        </div>
                         <ul className="list-group list-group-flush">
                             {MonthQuery.data.top.map((topic, i) => <li className="list-group-item" key={i} onClick={topicInfo}>{topic}</li>)}
                         </ul>
