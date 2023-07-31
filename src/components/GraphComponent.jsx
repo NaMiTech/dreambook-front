@@ -76,7 +76,7 @@ export const options = {
       titleFont: {size: 16},
       titleMarginBottom: 6,
       bodyAlign: 'center',
-      bodyFont: {size: 30},
+      bodyFont: {size: 30},      
       footerFont: {size: 10},
       footerAlign: 'center',
       footerMarginTop: 6,
@@ -95,19 +95,12 @@ export const options = {
       display: true,
       position: 'left',
       pointRadius: 6,
+      labelTextColor: '#FFF',
       ticks:{
         callback: function(val, index){return getLabelForValue(val)}
       },
     },
-    y1: {
-      type: 'linear',
-      display: true,
-      position: 'right',
-      pointRadius: 6,
-      grid: {
-        drawOnChartArea: false,
-      },
-    },
+
   },
 };
 

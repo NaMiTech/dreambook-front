@@ -4,7 +4,7 @@ export const dateSlice = createSlice({
     initialState:{
         day:null,
         month: null,
-        year: 2023
+        year: null
     },
 
     reducers:{

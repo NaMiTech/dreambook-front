@@ -33,11 +33,11 @@ export const MoonTable = () =>{
 
 return(
     <>
-
+<h3 className='section-title'>Influencia Lunar en {currentYear}</h3>
 <table className="dream-table">
   <thead>
     <tr>
-      <th scope="col">·</th>
+      <th scope="col"></th>
       <th scope="col"><img alt="first quarter" src={String(new_moon)}         className='table-image' title="Luna Nueva"/></th>
       <th scope="col"><img alt="first quarter" src={String(waxing_crescent)}  className='table-image' title="Luna "/></th>
       <th scope="col"><img alt="first quarter" src={String(first_quarter)}    className='table-image' title="Luna "/></th>
@@ -51,7 +51,7 @@ return(
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Positivos</th>
+      <td>Positivos</td>
       <td>{MoonStadisticQuery.data.new_moon["positive"]} %</td>
       <td>{MoonStadisticQuery.data.waxing_crescent["positive"]} %</td>
       <td>{MoonStadisticQuery.data.first_quarter["positive"]} %</td>
@@ -62,7 +62,7 @@ return(
       <td>{MoonStadisticQuery.data.waning_crescent["positive"]} %</td>
     </tr>
     <tr>
-      <th scope="row">Neutros</th>
+      <td>Neutros</td>
       <td>{MoonStadisticQuery.data.new_moon["neutral"]} %</td>
       <td>{MoonStadisticQuery.data.waxing_crescent["neutral"]} %</td>
       <td>{MoonStadisticQuery.data.first_quarter["neutral"]} %</td>
@@ -73,7 +73,7 @@ return(
       <td>{MoonStadisticQuery.data.waning_crescent["neutral"]} %</td>
     </tr>
     <tr>
-      <th scope="row">Negativos</th>
+      <td>Negativos</td>
       <td>{MoonStadisticQuery.data.new_moon["negative"]} %</td>
       <td>{MoonStadisticQuery.data.waxing_crescent["negative"]} %</td>
       <td>{MoonStadisticQuery.data.first_quarter["negative"]} %</td>
@@ -83,8 +83,11 @@ return(
       <td>{MoonStadisticQuery.data.last_quarter["negative"]} %</td>
       <td>{MoonStadisticQuery.data.waning_crescent["negative"]} %</td>
     </tr>
-    <tr className='total-row'>
-      <th scope="row">Totales</th>
+
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Totales</td>
       <td>{MoonStadisticQuery.data.new_moon["total"]} </td>
       <td>{MoonStadisticQuery.data.waxing_crescent["total"]}</td>
       <td>{MoonStadisticQuery.data.first_quarter["total"]} </td>
@@ -94,7 +97,7 @@ return(
       <td>{MoonStadisticQuery.data.last_quarter["total"]} </td>
       <td>{MoonStadisticQuery.data.waning_crescent["total"]} </td>
     </tr>
-  </tbody>
+  </tfoot>
 </table>
 </>
 )

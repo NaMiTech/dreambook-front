@@ -56,7 +56,7 @@ export const DayNavigator = () => {
   const infoCurrentDay = useDay()
     
   const [currentDay, setCurrenDay] = useState(1);
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
     const handleOnChange = (e) =>{
         console.log(e.target.value);
@@ -78,11 +78,7 @@ export const DayNavigator = () => {
     return(
         <>
         <div className='component'>
-        {
-          day
-          ?<h3>El día : {day}/{month}/{year}</h3>          
-          :<h3>Seleccione un día</h3>
-        }
+
         <Slider
               aria-label="Restricted values"
               defaultValue={1}
@@ -95,9 +91,14 @@ export const DayNavigator = () => {
               />
 
         {
+          day
+          ?<h3 className='section-title'>El día : {day}/{month}/{year}</h3>          
+          :<h3>Seleccione un día</h3>
+        }
+
+        {
         infoCurrentDay
-            ? <DayInfo
-            currentDay={currentDay}/>
+            ? <DayInfo/>
             : <p>Seleccione una fecha</p>
         }
 

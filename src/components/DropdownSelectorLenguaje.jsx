@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react'
 import { setLanguage } from '../store/languageSlicer';
 
 
@@ -58,7 +57,7 @@ export const DropdownSelectorLenguaje = () => {
                         data-id={menuItem.label}                        
                         className="menu-item" 
                         onClick={handleSelect}>
-                            {menuItem.label} ({menuItem.count})
+                            {menuItem.label}
                         </li>                 
                     ))}
                 </ul>

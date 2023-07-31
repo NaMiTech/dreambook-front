@@ -5,9 +5,10 @@ import { month } from "../interfaces/month";
 import { dreambookApi } from "../apis/dreambookApi";
 
 
-const getMonth = async(month:string):Promise<month> =>{
+const getMonth = async(month:string):Promise<month | null> =>{
     const params = new URLSearchParams();
 
+    if(month === null){ return null }
     params.append('month', month.toString())
 
     const {data} = await dreambookApi.get<month>(`/get-dreams`, {params})
