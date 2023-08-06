@@ -18,7 +18,7 @@ h1{
   text-align: center;
   font-family: 'Roboto';
   font-size: 5.0rem !important;
-  margin-top: 3rem !important;
+  /* margin-top: 3rem !important; */
   /*margin-bottom: 5rem !important;*/
 }
 
@@ -36,7 +36,7 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Roboto' !important;
+  /* font-family: 'Roboto' !important; */
   width: 75%;
   margin-left: auto;
   margin-right: auto;
@@ -67,16 +67,7 @@ h2{
   margin-left: 2rem;
 }
 
-footer{
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  min-height: 70px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  color: white;
-  padding: 1rem;
-}
+
 
 .errorCloud{
   min-height: 250px;
@@ -163,5 +154,35 @@ footer{
 }
 
 .icono-sociales{
+  color: white;
+}
+
+.dream-cloud{
+  font-size: 1.5rem !important;
+}
+
+.card-header{
+  /* background: rgba(255, 255, 255, 0.1) !important; */
+  background: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   color: black;
+}
+
+.feel-badge{
+  
+  font-size: 2rem !important;
+  height: 4rem;
+  width: 4rem;
+}
+
+.badge-title{
+  font-size: .7rem !important;
+  position: relative;
+  top: -1.5rem;
+
+}
+
+.badge-subtitle{
+  position: relative;
+  top: -1.8rem;
 }

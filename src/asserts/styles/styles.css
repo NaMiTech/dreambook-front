@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+body{
+    font-family: 'Concert One', cursive;
+    color: aliceblue;
+    text-align: center;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+h1{
+    font-family: 'Concert One', cursive;
+}
+
+h2{
+    color: #FFF;
+    font-family: 'Concert One', cursive;
+}
+
+.component{
+    margin-top: 2rem;
+    margin-bottom: .3rem;
+}
+
+.linea {
+    border-top: 1px solid #FFF;;
+    height: 2px;
+    max-width: 200px;
+    padding: 0;
+    margin: 50px auto 0 auto;
+}
+
+.dream-table{
+    background-color: transparent;
+    padding: .5rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 4px solid #FFF;
+    border-bottom: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.1) !important;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+}
+
+.dream-table th{
+    padding-top: 2rem;
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+}
+
+.dream-table tr{
+   text-align: center;
+}
+
+.table-image{
+    width: 75px;
+}
+
+.table-season-image{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.total-row{
+    border-top: 1px solid #FFF;
+    padding-bottom: 2rem;
+}
+
+tfoot{
+  border-top: 1px solid #FFF;  
+}
+
+tfoot td{
+  padding-top: 1.5rem;
+  
+}
+.card{
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.list-group list-group-flush{
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.list-group-item{
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.list-group-item:hover{
+    background-color: #FFF !important;
+    color: black;
+}
+
+.css-yafthl-MuiSlider-markLabel{
+    color: #FFF !important;
+}
+
+.css-1aznpnh-MuiSlider-root{
+    /* margin-right: 2rem;
+    margin-left: 2rem;
+    width: 90% !important; */
+    width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+    display: block !important;
+}
+
+footer{
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    min-height: 70px;
+    width: 100%;
+    height: 40px;
+    color: white;
+    padding: 1rem;
+    margin-top: 4rem;
+  }
+
+  .custom-loader {
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: relative;
+    left: 50%;
+    margin-top: 2rem;
+    border:4px solid #0000;
+    border-radius: 50%;
+    border-color:#E4E4ED #0000;
+    animation: s6 1s infinite linear;
+  }
+  .custom-loader::before,
+  .custom-loader::after {    
+    content:"";
+    grid-area: 1/1;
+    margin:2px;
+    border:inherit;
+    border-radius: 50%;
+  }
+  .custom-loader::before {
+    border-color:#766DF4 #0000;
+    animation:inherit; 
+    animation-duration: .5s;
+    animation-direction: reverse;
+  }
+  .custom-loader::after {
+    margin:8px;
+  }
+  
+  @keyframes s6 { 
+    100%{transform: rotate(1turn)}
+  }
+
+  .lenguaje-selector .card-title{
+    font-size: .9rem;    
+  }
+
+  .lenguaje-selector{
+    width: 20%;
+    position: absolute;
+    right: 2%;
+    top: .7%;
+    font-size: .6rem;
+
+  }
+
+  /* .lenguaje-selector :hover{
+    background-color: white;
+  } */
+
+  .lenguaje-selector .card-text{
+    color: white;
+  }
+
+  .menu {
+    position: absolute;
+    list-style-type: none;
+    /* margin: 5px 0; */
+    padding: 0;
+    width: 150px;
+    text-align: center;
+  }
+
+  .menu-item{
+    padding: 5px;
+    margin-top: 1px;
+    font-size: 1rem;    
+    text-align: center;
+  }
+
+  .menu-item:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    color: black;
+  }
+
+  .dropdown-toggle{
+    background-color: rgb(1, 2, 112);
+  }
+
+  .moon-display{
+    max-width: 100px;
+    margin-top: 3rem;
+  }
+
+  .grafica-evolucion{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+
+  .placeholder-no-data{
+    margin-top: 1rem;
+    color: gray;
+    padding-top: 2rem;
+  }
+
+  .card-header{
+    color: white;
+    font-size: 1.3rem;
+  }
+
+  .section-title{
+    margin-top: 4rem;
+  }
+
+  /* css-1eoe787-MuiSlider-markLabel{
+    color: red;
+  } */
+
+  td{
+    padding: 1rem;
+  }
+
+  .logo{
+    width: 200px;
+  }
+
+  .card-footer{
+    color: #FFF;
+    font-size: .9rem !important;
+  }
+
+.feel-label{
+  display: block;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  
+}
