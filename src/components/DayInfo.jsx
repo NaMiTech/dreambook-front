@@ -70,14 +70,17 @@ export const DayInfo = () => {
 
             <div className="row" style={{marginTop:'2rem'}}>
                 <div className="col">
+                    <span className="badge rounded-pill text-bg-success feel-badge"><span className='badge-title'>sentimiento predomintante</span> <br/><span className='badge-subtitle'>{payload.oniric_feel}</span></span>
                     <h3>Temas más soñados</h3>
-                    <span className='feel-label'>Sentimiento predominante:  <span className="badge rounded-pill text-bg-success">{payload.oniric_feel}</span></span>
+                    <br/>
+                    {/* <span className='feel-label'>Sentimiento predominante:  <span className="badge rounded-pill text-bg-success">{payload.oniric_feel}</span></span> */}
                     <CloudTags/>
                     
                 </div>
                 <div className="col">
+                    <span className="badge rounded-pill text-bg-danger feel-badge"><span className='badge-title'>sentimiento predomintante</span> <br/><span className='badge-subtitle'>{payload.day_feel}</span></span>
                     <h3>Temas más comentados</h3>
-                    <span className='feel-label'>Sentimiento predominante:  <span className="badge rounded-pill text-bg-danger">{payload.day_feel}</span></span>
+                    <br/>
                     <CloudTags/>
                     
                 </div>

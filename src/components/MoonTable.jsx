@@ -52,36 +52,36 @@ return(
   <tbody>
     <tr>
       <td>Positivos</td>
-      <td>{MoonStadisticQuery.data.new_moon["positive"]} %</td>
-      <td>{MoonStadisticQuery.data.waxing_crescent["positive"]} %</td>
-      <td>{MoonStadisticQuery.data.first_quarter["positive"]} %</td>
-      <td>{MoonStadisticQuery.data.waxing_gibbous["positive"]} %</td>
-      <td>{MoonStadisticQuery.data.full_moon["positive"]} %</td>
-      <td>{MoonStadisticQuery.data.waning_gibbous["positive"]} %</td>
-      <td>{MoonStadisticQuery.data.last_quarter["positive"]} %</td>
-      <td>{MoonStadisticQuery.data.waning_crescent["positive"]} %</td>
+      <td>{MoonStadisticQuery.data.new_moon["positive"]}%</td>
+      <td>{MoonStadisticQuery.data.waxing_crescent["positive"]}%</td>
+      <td>{MoonStadisticQuery.data.first_quarter["positive"]}%</td>
+      <td>{MoonStadisticQuery.data.waxing_gibbous["positive"]}%</td>
+      <td>{MoonStadisticQuery.data.full_moon["positive"]}%</td>
+      <td>{MoonStadisticQuery.data.waning_gibbous["positive"]}%</td>
+      <td>{MoonStadisticQuery.data.last_quarter["positive"]}%</td>
+      <td>{MoonStadisticQuery.data.waning_crescent["positive"]}%</td>
     </tr>
     <tr>
       <td>Neutros</td>
-      <td>{MoonStadisticQuery.data.new_moon["neutral"]} %</td>
-      <td>{MoonStadisticQuery.data.waxing_crescent["neutral"]} %</td>
-      <td>{MoonStadisticQuery.data.first_quarter["neutral"]} %</td>
-      <td>{MoonStadisticQuery.data.waxing_gibbous["neutral"]} %</td>
-      <td>{MoonStadisticQuery.data.full_moon["neutral"]} %</td>
-      <td>{MoonStadisticQuery.data.waning_gibbous["neutral"]} %</td>
-      <td>{MoonStadisticQuery.data.last_quarter["neutral"]} %</td>
-      <td>{MoonStadisticQuery.data.waning_crescent["neutral"]} %</td>
+      <td>{MoonStadisticQuery.data.new_moon["neutral"]}%</td>
+      <td>{MoonStadisticQuery.data.waxing_crescent["neutral"]}%</td>
+      <td>{MoonStadisticQuery.data.first_quarter["neutral"]}%</td>
+      <td>{MoonStadisticQuery.data.waxing_gibbous["neutral"]}%</td>
+      <td>{MoonStadisticQuery.data.full_moon["neutral"]}%</td>
+      <td>{MoonStadisticQuery.data.waning_gibbous["neutral"]}%</td>
+      <td>{MoonStadisticQuery.data.last_quarter["neutral"]}%</td>
+      <td>{MoonStadisticQuery.data.waning_crescent["neutral"]}%</td>
     </tr>
     <tr>
       <td>Negativos</td>
-      <td>{MoonStadisticQuery.data.new_moon["negative"]} %</td>
-      <td>{MoonStadisticQuery.data.waxing_crescent["negative"]} %</td>
-      <td>{MoonStadisticQuery.data.first_quarter["negative"]} %</td>
-      <td>{MoonStadisticQuery.data.waxing_gibbous["negative"]} %</td>
-      <td>{MoonStadisticQuery.data.full_moon["negative"]} %</td>
-      <td>{MoonStadisticQuery.data.waning_gibbous["negative"]} %</td>
-      <td>{MoonStadisticQuery.data.last_quarter["negative"]} %</td>
-      <td>{MoonStadisticQuery.data.waning_crescent["negative"]} %</td>
+      <td>{MoonStadisticQuery.data.new_moon["negative"]}%</td>
+      <td>{MoonStadisticQuery.data.waxing_crescent["negative"]}%</td>
+      <td>{MoonStadisticQuery.data.first_quarter["negative"]}%</td>
+      <td>{MoonStadisticQuery.data.waxing_gibbous["negative"]}%</td>
+      <td>{MoonStadisticQuery.data.full_moon["negative"]}%</td>
+      <td>{MoonStadisticQuery.data.waning_gibbous["negative"]}%</td>
+      <td>{MoonStadisticQuery.data.last_quarter["negative"]}%</td>
+      <td>{MoonStadisticQuery.data.waning_crescent["negative"]}%</td>
     </tr>
 
   </tbody>
@@ -95,7 +95,7 @@ return(
       <td>{MoonStadisticQuery.data.full_moon["total"]} </td>
       <td>{MoonStadisticQuery.data.waning_gibbous["total"]} </td>
       <td>{MoonStadisticQuery.data.last_quarter["total"]} </td>
-      <td>{MoonStadisticQuery.data.waning_crescent["total"]} </td>
+      <td>{MoonStadisticQuery.data.waning_crescent["total"]}00 </td>
     </tr>
   </tfoot>
 </table>

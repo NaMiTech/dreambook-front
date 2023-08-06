@@ -7,7 +7,7 @@ export const Footer = () => {
         <footer>
         <div className='row'>
         <div className="col-4">
-            <a href ="/"><i className="fa-brands fa-twitter icono-sociales"></i></a>
+            <a href ="https://twitter.com/nami_tech"><i className="fa-brands fa-twitter icono-sociales"></i></a>
             &nbsp;&nbsp;
             <a href ="/"><i className="fa-brands fa-facebook-f icono-sociales"></i></a>
             &nbsp;&nbsp;

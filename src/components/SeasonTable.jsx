@@ -44,24 +44,24 @@ export const SeasonTable = () =>{
   <tbody>
     <tr>
       <td>Positivos</td>
-      <td>{SeasonQuery.data.sprint["positive"]} %</td>
-      <td>{SeasonQuery.data.summer["positive"]} %</td>
-      <td>{SeasonQuery.data.fall["positive"]} %</td>
-      <td>{SeasonQuery.data.winter["positive"]} %</td>
+      <td>{SeasonQuery.data.sprint["positive"]}%</td>
+      <td>{SeasonQuery.data.summer["positive"]}%</td>
+      <td>{SeasonQuery.data.fall["positive"]}%</td>
+      <td>{SeasonQuery.data.winter["positive"]}%</td>
     </tr>
     <tr>
       <td>Neutros</td>
-      <td>{SeasonQuery.data.sprint["neutral"]} %</td>
-      <td>{SeasonQuery.data.summer["neutral"]} %</td>
-      <td>{SeasonQuery.data.fall["neutral"]} %</td>
-      <td>{SeasonQuery.data.winter["neutral"]} %</td>
+      <td>{SeasonQuery.data.sprint["neutral"]}%</td>
+      <td>{SeasonQuery.data.summer["neutral"]}%</td>
+      <td>{SeasonQuery.data.fall["neutral"]}%</td>
+      <td>{SeasonQuery.data.winter["neutral"]}%</td>
     </tr>
     <tr>
       <td>Negativos</td>
-      <td>{SeasonQuery.data.sprint["negative"]} %</td>
-      <td>{SeasonQuery.data.summer["negative"]} %</td>
-      <td>{SeasonQuery.data.fall["negative"]} %</td>
-      <td>{SeasonQuery.data.winter["negative"]} %</td>
+      <td>{SeasonQuery.data.sprint["negative"]}%</td>
+      <td>{SeasonQuery.data.summer["negative"]}%</td>
+      <td>{SeasonQuery.data.fall["negative"]}%</td>
+      <td>{SeasonQuery.data.winter["negative"]}%</td>
     </tr>
   </tbody>
   <tfoot>

@@ -36,7 +36,7 @@ export const StadisticComponent = () => {
             <div className="row">
                 <div className="col">
                     <h3>Positivos</h3>
-                    <span className="badge rounded-pill text-bg-success">{MonthQuery.data.positive}%</span>
+                    <span className="badge rounded-pill text-bg-success feel-badge">{MonthQuery.data.positive}%</span>
                     
                 </div>
                 <div className="col">
@@ -51,7 +51,7 @@ export const StadisticComponent = () => {
                 </div>
                 <div className="col">
                     <h3>Negativos</h3>
-                    <span className="badge rounded-pill text-bg-danger">{MonthQuery.data.negative}%</span>
+                    <span className="badge rounded-pill text-bg-danger feel-badge">{MonthQuery.data.negative}%</span>
                 </div>
             </div>
             </div>
