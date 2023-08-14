@@ -117,7 +117,7 @@ export const GraphComponent = () => {
   
   },[currentYear])
 
-  if(EvolutionQuery.isLoading){return (<div class="custom-loader"></div>);}    
+  if(EvolutionQuery.isLoading){return (<div className="custom-loader"></div>);}    
   if(EvolutionQuery.isError){return (<ErrorComponent/>)}      
   if(!EvolutionQuery.data){return(<NoDataComponent/>)}
   

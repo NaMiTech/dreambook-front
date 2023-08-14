@@ -18,7 +18,7 @@ useEffect(()=>{
 
 },[currentLanguage])
 
-if(tagQuery.isLoading){return (<div class="custom-loader"></div>);}    
+if(tagQuery.isLoading){return (<div className="custom-loader"></div>);}    
 if(tagQuery.isError){return (<ErrorComponent/>)}      
 if(!tagQuery.data){return(<NoDataComponent/>)}
 
@@ -27,7 +27,7 @@ return(
     <div className="cloud-container">
     
         <TagCloud
-            // minSize={12}
+            minSize={25}
             maxSize={35}
             tags={tagQuery.data}
             className="dream-cloud"            

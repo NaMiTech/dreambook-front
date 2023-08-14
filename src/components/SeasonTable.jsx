@@ -22,7 +22,7 @@ export const SeasonTable = () =>{
     },[currentYear])
 
 
-    if(SeasonQuery.isLoading){return (<div class="custom-loader"></div>);}    
+    if(SeasonQuery.isLoading){return (<div className="custom-loader"></div>);}    
     if(SeasonQuery.isError){return (<ErrorComponent/>)}      
     if(!SeasonQuery.data){return(<NoDataComponent/>)}
 

@@ -27,7 +27,7 @@ export const MoonTable = () =>{
   
   },[currentYear])
 
-  if(MoonStadisticQuery.isLoading){return (<div class="custom-loader"></div>);}    
+  if(MoonStadisticQuery.isLoading){return (<div className="custom-loader"></div>);}    
   if(MoonStadisticQuery.isError){return (<ErrorComponent/>)}      
   if(!MoonStadisticQuery.data){return(<NoDataComponent/>)}
 

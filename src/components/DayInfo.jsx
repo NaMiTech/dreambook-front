@@ -28,7 +28,7 @@ export const DayInfo = () => {
         //console.log(DayQuery)
     }, [DayQuery])
 
-    if(DayQuery.isLoading){return (<div class="custom-loader"></div>);}    
+    if(DayQuery.isLoading){return (<div className="custom-loader"></div>);}    
     if(DayQuery.isError){return (<ErrorComponent/>)} 
     if(!DayQuery.data){return(<NoDataComponent/>)}
 
