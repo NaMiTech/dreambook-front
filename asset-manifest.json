@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "./static/css/main.11dc9821.css",
+    "main.js": "./static/js/main.499c2e0e.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "./static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "./static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "./static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/full_moon.png": "./static/media/full_moon.e06fc73e336901cb3ca7.png",
+    "static/media/waxing_gibbous.png": "./static/media/waxing_gibbous.32c8814983e38f65a85c.png",
+    "static/media/waning_gibbous.png": "./static/media/waning_gibbous.13ce56e847d554dd9bf4.png",
+    "static/media/fall.jpg": "./static/media/fall.630466e926bc48dbd90f.jpg",
+    "static/media/spring.jpg": "./static/media/spring.febf230b0f51d503b926.jpg",
+    "static/media/summer.jpg": "./static/media/summer.63e98e6aff7673bd76e9.jpg",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "./static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/winter.jpg": "./static/media/winter.b97e156f1edf965ebef2.jpg",
+    "static/media/first_quarter.png": "./static/media/first_quarter.5b308b114d5b456fd939.png",
+    "static/media/last_quarter.png": "./static/media/last_quarter.7e44f3ec806a8fe39f94.png",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "./static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/waning_crescent.png": "./static/media/waning_crescent.fda1533081112ac5a690.png",
+    "static/media/waxing_crescent.png": "./static/media/waxing_crescent.2add1421849231921168.png",
+    "static/media/google-play-badge.png": "./static/media/google-play-badge.f7515e81714b1c53997a.png",
+    "static/media/logo512.png": "./static/media/logo512.688ac4b296d04736a472.png",
+    "static/media/new_moon.png": "./static/media/new_moon.c44aa786a026ff3ccd8b.png",
+    "index.html": "./index.html",
+    "main.11dc9821.css.map": "./static/css/main.11dc9821.css.map",
+    "main.499c2e0e.js.map": "./static/js/main.499c2e0e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.11dc9821.css",
+    "static/js/main.499c2e0e.js"
+  ]
+}
