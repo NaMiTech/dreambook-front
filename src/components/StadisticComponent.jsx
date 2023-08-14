@@ -20,9 +20,9 @@ export const StadisticComponent = () => {
 
     //console.log(MonthQuery.data)
 
-    const topicInfo = () =>{
+    const topicInfo = (topic) =>{
         Swal.fire({
-            title: ``,
+            title: `${topic}`,
             text:  ``,
             icon: 'info',
             confirmButtonText: 'ok'
@@ -45,7 +45,7 @@ export const StadisticComponent = () => {
                             <p>Top de temas en {selectMonth} del {selectYear}</p>                    
                         </div>
                         <ul className="list-group list-group-flush">
-                            {MonthQuery.data.top.map((topic, i) => <li className="list-group-item" key={i} onClick={topicInfo}>{topic}</li>)}
+                            {MonthQuery.data.top.map((topic, i) => <li className="list-group-item" key={i} onClick={()=>topicInfo(topic)}>{topic}</li>)}
                         </ul>
                     </div>
                 </div>
