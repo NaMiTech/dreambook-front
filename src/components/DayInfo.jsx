@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { CloudTags } from '../CloudTags';
 import { useMoon } from '../hooks/useMoon';
 import { useDay } from '../hooks/useDay';
+import Swal from 'sweetalert2'
 
 import { ErrorComponent } from './ErrorComponent';
 import { NoDataComponent } from './NoDataComponent';
@@ -31,9 +32,17 @@ export const DayInfo = () => {
     if(DayQuery.isError){return (<ErrorComponent/>)} 
     if(!DayQuery.data){return(<NoDataComponent/>)}
 
-
-
     const payload = DayQuery.data;
+
+    const topicInfo = (topic) =>{
+        Swal.fire({
+            title: `${topic}`,
+            text:  ``,
+            icon: 'info',
+            confirmButtonText: 'ok'
+          })
+
+    }
 
     return(
         <>
@@ -58,7 +67,7 @@ export const DayInfo = () => {
                                          
                         </div>
                          <ul className="list-group list-group-flush">
-                             {payload.top.map((topic, i) => <li className="list-group-item" key={i}>{topic}</li>)}
+                             {payload.top.map((topic, i) => <li className="list-group-item" key={i} onClick={()=>topicInfo(topic)}>{topic}</li>)}
                          </ul>
                          <div className="card-footer">
                             Total de temas analizado: {payload.total}
